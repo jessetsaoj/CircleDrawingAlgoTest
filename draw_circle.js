@@ -10,7 +10,7 @@ function setup() {
     createCanvas(canvas_width, canvas_height);
     // randomize the positions of circles
     for(let i = 0; i < numOfCircles; ++i) 
-        rand_pos.push([Math.floor(Math.random()*canvas_width), Math.floor(Math.random()*canvas_height)]);
+        rand_pos.push([Math.floor(Math.random() * canvas_width), Math.floor(Math.random() * canvas_height)]);
 }
   
 function draw() {
@@ -27,7 +27,7 @@ function draw() {
     background(220);
     testCircle(circleByBresenham, radius);
 
-    noLoop(); // so the function called only once
+    noLoop(); // so the function is called only once
 }
   
 function testCircle(fn, radius) {
@@ -86,7 +86,7 @@ function circleByRotationMatrix(cx, cy, r) {
     }
 }
   
-/* 2. Bresenham method */
+/* 4. Bresenham method */
 function circleByBresenham(cx, cy, r) {
     let x = r, y = 0;
     let d = 1 - r;
